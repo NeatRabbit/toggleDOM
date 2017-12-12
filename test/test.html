@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.test + .test2 {
+			color: red;
+		}
+		.test + .test3 {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">test</div>
+	<div class="test2">test2</div>
+	<div class="test">
+		test
+		<div class="test">
+			test
+		</div>
+	</div>
+	<div class="test3">test3</div>
+	<button onclick="toggle()">
+		toggle test
+	</button>
+	<button onclick="toggle2()">
+		toggle test2
+	</button>
+	<button onclick="toggle3()">
+		toggle test3
+	</button>
+	<script type="text/javascript" src="../index.js"></script>
+	<script type="text/javascript">
+		function toggle() {
+			toggleDOM('.test');
+		}
+		function toggle2() {
+			toggleDOM('.test:first-child');
+		}
+		function toggle3() {
+			toggleDOM(['.test2', '.test3']);
+		}
+		document.querySelector('.test2').addEventListener('click', function() {
+			console.log('test2');
+		})
+	</script>
+</body>
+</html>
