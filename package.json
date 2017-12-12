@@ -1,0 +1,12 @@
+{
+  "name": "toggleDOM",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+  	"build": "uglifyjs index.js -b -o dist/toggle-dom.js && uglifyjs index.js -o dist/toggle-dom.min.js"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.2.2"
+  }
+}
