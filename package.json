@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "description": "Toggle dom use css selector",
   "scripts": {
   	"build": "uglifyjs index.js -b -o dist/toggle-dom.js && uglifyjs index.js -o dist/toggle-dom.min.js"
   },
